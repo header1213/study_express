@@ -1,0 +1,9 @@
+html 
+  head 
+    link(rel="stylesheet", href="/static/index.css", type="text/css")
+  body 
+    h1="Userlist Page"
+    ul
+      each user in users
+        li
+          a(href=`/users/${user.id}`)=user.nickname

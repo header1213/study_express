@@ -1,0 +1,14 @@
+html 
+  head 
+    link(rel="stylesheet" href="/static/index.css" type="text/css")
+  body 
+    h1.gold User Profile Page
+    h2=user.nickname
+    h2 Profile
+    img(src=`/uploads/${user.profile}` width=200)
+    form(action=`/users/${user.id}/profile` method="post" enctype="multipart/form-data")
+      input(type="file", name="profile")
+      button Upload profile picture
+    a(href=`/users/${user.id}/nickname`) change nickname
+    div
+      a(href=`/users/`)="user list"
